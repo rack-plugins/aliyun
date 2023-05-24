@@ -18,7 +18,7 @@ func Allow(c *gin.Context) {
 		return
 	}
 
-	ezap.Debugf("请求添加安全组规则, 传入 IP 地址: %s, 安全组 ID: %s, 备注(用户名): %s, 策略: %s", sgrule.IP, sgrule.SGID, sgrule.Remark, sgrule.Policy)
+	ezap.Debugf("请求添加安全组规则, 传入 IP 地址: %s, 安全组 ID: %s, 备注: %s, 策略: %s", sgrule.IP, sgrule.SGID, sgrule.Remark, sgrule.Policy)
 	if !sgrule.verify() {
 		ezap.Errorw("aliyun securitygroup cap", "desc", "传入参数不符合要求")
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "传入参数不符合要求"})
