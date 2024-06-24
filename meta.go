@@ -8,7 +8,7 @@ import (
 const (
 	ID            = "aliyun"
 	Comment       = "aliyun api"
-	RoutePrefix   = "/"
+	RoutePrefix   = "/aliyun"
 	DefaultEnable = false
 )
 
